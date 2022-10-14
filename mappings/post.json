@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "POST",
+        "urlPattern": ".*"
+    },
+    "response": {
+        "status": 200,
+        "body": "Hello world!",
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json",
+            "x-correlation-id": "{{request.headers.x-correlation-id}}"
+        }
+    }
+}
