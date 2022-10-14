@@ -1,0 +1,1 @@
+docker run -it --rm -p 8080:8080 -v C:\pluralsight\wiremock:/home/wiremock --name wiremock wiremock/wiremock:2.33.2
