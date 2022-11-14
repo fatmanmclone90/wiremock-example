@@ -1,0 +1,15 @@
+{
+    "timestamp":"2021-03-17T15:05:15",
+    "mappedMessages":[
+        {
+            "messageVersion": "1",
+            "payload":"{\"foo\":\"bar\"}",
+            "destinations":[
+                {
+                    "type": "ServiceBusTopic",
+                    "name": "foo"
+                }
+            ]
+        }
+    ]
+}

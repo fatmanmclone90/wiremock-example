@@ -1,0 +1,16 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "POST",
+        "urlPath": "/Map"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "files/MappingSuccess.json",
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json",
+            "x-correlation-id": "{{request.headers.x-correlation-id}}"
+        }
+    }
+}

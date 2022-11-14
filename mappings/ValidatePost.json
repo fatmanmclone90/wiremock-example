@@ -1,0 +1,16 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "POST",
+        "urlPath": "/Validate"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "files/ValidationSuccess.json",
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json",
+            "x-correlation-id": "{{request.headers.x-correlation-id}}"
+        }
+    }
+}
