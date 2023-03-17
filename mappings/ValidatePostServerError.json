@@ -1,5 +1,5 @@
 {
-    "priority": 2,
+    "priority": 1,
     "request": {
         "method": "POST",
         "urlPath": "/Validate",
@@ -7,11 +7,16 @@
             "api-key": {
                 "equalTo": "wiremock"
             }
-        }
+        },
+        "bodyPatterns": [
+            {
+                "matchesJsonPath": "$.[?(@.messageNumber=='1')]"
+            }
+        ]
     },
     "response": {
-        "status": 200,
-        "bodyFileName": "files/ValidationSuccess.json",
+        "status": 500,
+        "bodyFileName": "files/ValidationServerError.json",
         "transformers": [
             "response-template"
         ],
