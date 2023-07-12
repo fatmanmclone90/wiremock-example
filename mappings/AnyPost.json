@@ -1,0 +1,20 @@
+{
+    "priority": 99,
+    "request": {
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "files/AnyPost.json",
+        "transformers": ["response-template"],
+        "headers": {
+            "Content-Type": "application/json",
+            "x-correlation-id": "{{request.headers.x-correlation-id}}"
+        },
+        "delayDistribution": {
+            "type": "lognormal",
+            "median": 400,
+            "sigma": 0.8
+        }
+    }
+}
